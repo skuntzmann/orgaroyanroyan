@@ -6,10 +6,18 @@
 
   <title>ORGANISATION ROYAN-ORGUES</title>
 
-  <link rel="manifest" href="./manifest.webmanifest">
-  <meta name="theme-color" content="#ffffff">
+  <!-- Liens en dur -->
+  <link
+    rel="manifest"
+    href="https://skuntzmann.github.io/orgaroyanroyan/manifest.webmanifest"
+  >
 
-  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link
+    rel="apple-touch-icon"
+    href="https://skuntzmann.github.io/orgaroyanroyan/icons/icon-192.png"
+  >
+
+  <meta name="theme-color" content="#123d7a">
 
   <style>
     * {
@@ -18,35 +26,34 @@
 
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
-      color: #222;
+      color: #222222;
       text-align: center;
     }
 
     .container {
-      width: 90%;
-      max-width: 500px;
-      padding: 30px 20px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .logo {
-      width: 260px;
-      max-width: 85%;
+      width: 220px;
+      max-width: 80%;
       height: auto;
-      margin-bottom: 25px;
+      margin: 20px auto 25px;
+      display: block;
     }
 
     h1 {
-      font-size: 25px;
-      margin: 0 0 12px;
+      font-size: 28px;
+      margin: 10px 0 30px;
+      color: #123d7a;
     }
 
-    p {
+    .intro {
+      font-size: 18px;
       line-height: 1.5;
       margin-bottom: 20px;
     }
@@ -54,68 +61,60 @@
     .button {
       display: block;
       width: 100%;
-      padding: 15px 20px;
-      margin: 12px 0;
-      border: none;
-      border-radius: 10px;
-      font-size: 17px;
-      font-weight: bold;
+      max-width: 500px;
+      margin: 15px auto;
+      padding: 16px 20px;
+      border-radius: 8px;
       text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    /* Bouton principal */
-    .button.site {
-      background: #000000;
-      color: white;
-      margin-top: 10px;
-      margin-bottom: 30px;
+    .site-button {
+      background: #123d7a;
+      color: #ffffff;
     }
 
-    /* Boutons d'installation */
-    .button.install {
-      background: #666666;
-      color: white;
-    }
-
-    .button.install:hover {
-      background: #555555;
+    .install {
+      background: #777777;
+      color: #ffffff;
     }
 
     .installation {
       display: none;
-      margin-top: 10px;
+      margin-top: 35px;
       padding: 20px;
-      border-radius: 12px;
-      background: #f1f1f1;
-      text-align: left;
-      line-height: 1.6;
+      border-top: 1px solid #dddddd;
     }
 
     .installation-title {
-      text-align: center;
-      font-size: 19px;
+      font-size: 21px;
       font-weight: bold;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
+      color: #123d7a;
     }
 
     .installation p {
-      margin-bottom: 15px;
-    }
-
-    .installation ol {
-      padding-left: 25px;
-      margin-bottom: 10px;
+      line-height: 1.5;
+      font-size: 16px;
     }
 
     .installation small {
       display: block;
-      margin-top: 10px;
+      margin-top: 15px;
       line-height: 1.5;
+      color: #555555;
     }
 
-    .installation .button {
-      text-align: center;
+    .manual {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: #f2f2f2;
+      border-radius: 8px;
+      text-align: left;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -124,27 +123,24 @@
 
   <div class="container">
 
-    <!-- Logo -->
     <img
       class="logo"
-      src="./icons/ORGANISATION.png"
-      alt="Festival Royan Orgues - Organisation"
+      src="https://skuntzmann.github.io/orgaroyanroyan/icons/ORGANISATION.png"
+      alt="ORGANISATION ROYAN-ORGUES"
     >
 
     <h1>ORGANISATION ROYAN-ORGUES</h1>
 
-    <p>
-      Accédez au site Organisation du festival.
+    <p class="intro">
+      Accédez au site d'organisation du Festival Royan Orgues.
     </p>
 
-    <!-- ACCÈS AU SITE -->
+    <!-- LIEN DIRECT VERS LE SITE -->
     <a
-      class="button site"
+      class="button site-button"
       href="https://organisation.royan-orgues.fr"
-      target="_blank"
-      rel="noopener"
     >
-      ⚫ Consulter le site ORGANISATION ROYAN-ORGUES
+      Consulter le site ORGANISATION ROYAN-ORGUES
     </a>
 
 
@@ -152,7 +148,7 @@
     <div id="androidOther" class="installation">
 
       <div class="installation-title">
-        📲 Installer l'application
+        Installer l'application
       </div>
 
       <p>
@@ -164,8 +160,8 @@
         ouvrez cette page avec <strong>Google Chrome</strong>.
       </p>
 
+      <!-- LIEN CHROME EN DUR -->
       <a
-        id="openChrome"
         class="button install"
         href="googlechrome://navigate/?url=https%3A%2F%2Fskuntzmann.github.io%2Forgaroyanroyan%2F"
       >
@@ -175,7 +171,9 @@
       <small>
         Si le bouton ne fonctionne pas, ouvrez cette adresse avec Chrome :
         <br>
-        <strong>skuntzmann.github.io/orgaroyanroyan/</strong>
+        <strong>
+          https://skuntzmann.github.io/orgaroyanroyan/
+        </strong>
       </small>
 
     </div>
@@ -185,38 +183,30 @@
     <div id="androidChrome" class="installation">
 
       <div class="installation-title">
-        📲 Installer l'application
+        Installer l'application
       </div>
 
       <p>
-        Ajoutez ORGANISATION ROYAN-ORGUES à l'écran d'accueil
-        de votre téléphone.
+        Installez ORGANISATION ROYAN-ORGUES directement sur votre écran
+        d'accueil.
       </p>
 
       <button
         id="installButton"
         class="button install"
+        style="display:none;"
       >
         📲 Installer l'application
       </button>
 
-      <div id="androidManual" style="display:none;">
-
-        <p>
-          Si l'installation automatique n'est pas proposée :
-        </p>
-
-        <ol>
-          <li>Appuyez sur le menu <strong>⋮</strong> de Chrome.</li>
-          <li>
-            Choisissez
-            <strong>Ajouter à l'écran d'accueil</strong>
-            ou
-            <strong>Installer l'application</strong>.
-          </li>
-          <li>Confirmez l'installation.</li>
-        </ol>
-
+      <div id="androidManual" class="manual">
+        <strong>Si le bouton d'installation n'apparaît pas :</strong>
+        <br><br>
+        ouvrez le menu <strong>⋮</strong> de Google Chrome,
+        puis choisissez
+        <strong>« Installer l'application »</strong>
+        ou
+        <strong>« Ajouter à l'écran d'accueil »</strong>.
       </div>
 
     </div>
@@ -226,27 +216,19 @@
     <div id="iosInstructions" class="installation">
 
       <div class="installation-title">
-        📲 Installer l'application
+        Installer sur iPhone / iPad
       </div>
 
       <p>
-        Pour installer l'application sur votre iPhone ou votre iPad :
+        Ouvrez cette page avec <strong>Safari</strong>.
       </p>
 
-      <ol>
-        <li>
-          Ouvrez cette page dans <strong>Safari</strong>.
-        </li>
-        <li>
-          Appuyez sur le bouton <strong>Partager</strong> 📤.
-        </li>
-        <li>
-          Choisissez <strong>Sur l'écran d'accueil</strong>.
-        </li>
-        <li>
-          Appuyez sur <strong>Ajouter</strong>.
-        </li>
-      </ol>
+      <p>
+        Appuyez sur le bouton
+        <strong>Partager</strong>
+        puis choisissez
+        <strong>« Sur l'écran d'accueil »</strong>.
+      </p>
 
     </div>
 
@@ -259,13 +241,13 @@
       </div>
 
       <p>
-        Vous pouvez installer l'application sur votre ordinateur
-        si votre navigateur propose cette fonction.
+        Si votre navigateur propose l'installation de cette application,
+        utilisez l'icône d'installation présente dans la barre d'adresse.
       </p>
 
       <p>
-        Recherchez l'icône d'installation dans la barre d'adresse
-        ou dans le menu de votre navigateur.
+        Vous pouvez également ouvrir le menu de votre navigateur et rechercher
+        <strong>« Installer l'application »</strong>.
       </p>
 
     </div>
@@ -274,7 +256,6 @@
 
 
   <script>
-
     const userAgent =
       navigator.userAgent ||
       navigator.vendor ||
@@ -297,7 +278,6 @@
     const isDesktop =
       !isAndroid && !isIOS;
 
-
     const androidOther =
       document.getElementById("androidOther");
 
@@ -310,26 +290,12 @@
     const desktopInstructions =
       document.getElementById("desktopInstructions");
 
-
-    /*
-     * Affichage selon l'appareil
-     */
-
     if (isAndroid) {
 
       if (isChromeAndroid) {
-
         androidChrome.style.display = "block";
-
       } else {
-
         androidOther.style.display = "block";
-
-        const currentUrl =
-          "https://skuntzmann.github.io/orgaroyanroyan/";
-
-        document.getElementById("openChrome").href =
-          "https://skuntzmann.github.io/orgaroyanroyan/";
       }
 
     } else if (isIOS) {
@@ -344,8 +310,8 @@
 
 
     /*
-     * Installation PWA Android / Chrome
-     */
+      Installation PWA Android / Chrome
+    */
 
     let deferredPrompt = null;
 
@@ -354,7 +320,6 @@
 
     const androidManual =
       document.getElementById("androidManual");
-
 
     window.addEventListener(
       "beforeinstallprompt",
@@ -365,6 +330,7 @@
         deferredPrompt = event;
 
         installButton.style.display = "block";
+
         androidManual.style.display = "none";
       }
     );
@@ -393,15 +359,12 @@
         } else {
 
           installButton.style.display = "none";
+
           androidManual.style.display = "block";
         }
       }
     );
 
-
-    /*
-     * Application installée
-     */
 
     window.addEventListener(
       "appinstalled",
@@ -412,10 +375,10 @@
         );
 
         installButton.style.display = "none";
+
         androidManual.style.display = "none";
       }
     );
-
   </script>
 
 </body>
