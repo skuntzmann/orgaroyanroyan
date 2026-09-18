@@ -3,125 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#123d7a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ROYAN-ORGUES">
   <title>ORGANISATION ROYAN-ORGUES</title>
 
-  <!-- Liens en dur -->
-  <link
-    rel="manifest"
-    href="https://skuntzmann.github.io/orgaroyanroyan/manifest.webmanifest"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="https://skuntzmann.github.io/orgaroyanroyan/icons/icon-192.png"
-  >
-
-  <meta name="theme-color" content="#123d7a">
+  <link rel="manifest" href="https://skuntzmann.github.io/orgaroyanroyan/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="https://skuntzmann.github.io/orgaroyanroyan/icons/icon-192.png">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      padding: 20px;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #222222;
-      text-align: center;
+      margin: 0; min-height: 100vh; font-family: Arial, Helvetica, sans-serif;
+      background: #fff; color: #222; display: flex; justify-content: center;
+      align-items: center; padding: 24px;
     }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      width: 220px;
-      max-width: 80%;
-      height: auto;
-      margin: 20px auto 25px;
-      display: block;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin: 10px 0 30px;
-      color: #123d7a;
-    }
-
-    .intro {
-      font-size: 18px;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
+    .container { width: 100%; max-width: 520px; text-align: center; }
+    .logo { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto 28px; }
+    .intro { font-size: 18px; line-height: 1.5; margin: 0 0 18px; }
     .button {
-      display: block;
-      width: 100%;
-      max-width: 500px;
-      margin: 15px auto;
-      padding: 16px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
+      display: block; width: 100%; padding: 15px 20px; border-radius: 10px;
+      text-decoration: none; font-size: 17px; font-weight: bold;
+      cursor: pointer; margin: 10px 0;
     }
-
-    .site-button {
-      background: #123d7a;
-      color: #ffffff;
-    }
-
-    .install {
-      background: #777777;
-      color: #ffffff;
-    }
-
-    .installation {
-      display: none;
-      margin-top: 35px;
-      padding: 20px;
-      border-top: 1px solid #dddddd;
-    }
-
-    .installation-title {
-      font-size: 21px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: #123d7a;
-    }
-
-    .installation p {
-      line-height: 1.5;
-      font-size: 16px;
-    }
-
-    .installation small {
-      display: block;
-      margin-top: 15px;
-      line-height: 1.5;
-      color: #555555;
-    }
-
+    .main-button { background: #123d7a; color: #fff; }
+    .install { background: #eee; color: #222; border: 1px solid #ccc; }
+    .installation { margin-top: 28px; padding-top: 20px; border-top: 1px solid #ddd; }
+    .installation-title { font-size: 20px; font-weight: bold; margin-bottom: 12px; }
+    .installation p { font-size: 15px; line-height: 1.5; margin: 8px 0; }
     .manual {
-      display: none;
-      margin-top: 15px;
-      padding: 15px;
-      background: #f2f2f2;
-      border-radius: 8px;
-      text-align: left;
-      line-height: 1.5;
+      display: none; margin-top: 12px; padding: 12px; background: #f5f5f5;
+      border-radius: 8px; font-size: 14px; line-height: 1.5;
     }
+    small { display: block; margin-top: 10px; line-height: 1.5; color: #666; }
+    #ios, #androidOther, #desktop { display: none; }
   </style>
 </head>
 
 <body>
-
-  <div class="container">
+  <main class="container">
 
     <img
       class="logo"
@@ -129,38 +50,34 @@
       alt="ORGANISATION ROYAN-ORGUES"
     >
 
-    <h1>ORGANISATION ROYAN-ORGUES</h1>
+    <p class="intro">Accédez à l'organisation du Festival Royan Orgues.</p>
 
-    <p class="intro">
-      Accédez au site d'organisation du Festival Royan Orgues.
-    </p>
-
-    <!-- LIEN DIRECT VERS LE SITE -->
-    <a
-      class="button site-button"
-      href="https://organisation.royan-orgues.fr"
-    >
-      Consulter le site ORGANISATION ROYAN-ORGUES
+    <a class="button main-button" href="https://organisation.royan-orgues.fr">
+      Accéder à l'organisation
     </a>
 
+    <section id="androidChrome" class="installation">
+      <div class="installation-title">Installer l'application</div>
+      <p>Vous utilisez Google Chrome sur Android.</p>
 
-    <!-- ANDROID : AUTRE NAVIGATEUR -->
-    <div id="androidOther" class="installation">
+      <button id="installButton" class="button install" type="button">
+        📲 Installer l'application
+      </button>
 
-      <div class="installation-title">
-        Installer l'application
+      <div id="manualAndroid" class="manual">
+        Si Chrome ne propose pas automatiquement l'installation,
+        ouvrez le menu <strong>⋮</strong> de Chrome puis choisissez
+        <strong>Installer l'application</strong> ou
+        <strong>Ajouter à l'écran d'accueil</strong>.
       </div>
+    </section>
 
-      <p>
-        Vous utilisez actuellement un navigateur autre que Chrome.
-      </p>
+    <section id="androidOther" class="installation">
+      <div class="installation-title">Installer l'application</div>
+      <p>Vous utilisez actuellement un navigateur autre que Chrome.</p>
+      <p>Pour installer l'application sur l'écran d'accueil,
+        ouvrez cette page avec <strong>Google Chrome</strong>.</p>
 
-      <p>
-        Pour installer l'application sur l'écran d'accueil,
-        ouvrez cette page avec <strong>Google Chrome</strong>.
-      </p>
-
-      <!-- LIEN CHROME EN DUR -->
       <a
         class="button install"
         href="googlechrome://navigate/?url=https%3A%2F%2Fskuntzmann.github.io%2Forgaroyanroyan%2F"
@@ -171,215 +88,80 @@
       <small>
         Si le bouton ne fonctionne pas, ouvrez cette adresse avec Chrome :
         <br>
-        <strong>
-          https://skuntzmann.github.io/orgaroyanroyan/
-        </strong>
+        <strong>https://skuntzmann.github.io/orgaroyanroyan/</strong>
       </small>
+    </section>
 
-    </div>
+    <section id="ios" class="installation">
+      <div class="installation-title">Installer l'application</div>
+      <p>Dans Safari, appuyez sur le bouton <strong>Partager</strong>.</p>
+      <p>Choisissez ensuite <strong>Ajouter à l'écran d'accueil</strong>.</p>
+    </section>
 
+    <section id="desktop" class="installation">
+      <div class="installation-title">Installer l'application</div>
+      <p>Dans votre navigateur, recherchez l'icône <strong>Installer</strong>
+        dans la barre d'adresse ou ouvrez le menu du navigateur.</p>
+      <p>Choisissez ensuite <strong>Installer l'application</strong>.</p>
+    </section>
 
-    <!-- ANDROID : CHROME -->
-    <div id="androidChrome" class="installation">
-
-      <div class="installation-title">
-        Installer l'application
-      </div>
-
-      <p>
-        Installez ORGANISATION ROYAN-ORGUES directement sur votre écran
-        d'accueil.
-      </p>
-
-      <button
-        id="installButton"
-        class="button install"
-        style="display:none;"
-      >
-        📲 Installer l'application
-      </button>
-
-      <div id="androidManual" class="manual">
-        <strong>Si le bouton d'installation n'apparaît pas :</strong>
-        <br><br>
-        ouvrez le menu <strong>⋮</strong> de Google Chrome,
-        puis choisissez
-        <strong>« Installer l'application »</strong>
-        ou
-        <strong>« Ajouter à l'écran d'accueil »</strong>.
-      </div>
-
-    </div>
-
-
-    <!-- IOS -->
-    <div id="iosInstructions" class="installation">
-
-      <div class="installation-title">
-        Installer sur iPhone / iPad
-      </div>
-
-      <p>
-        Ouvrez cette page avec <strong>Safari</strong>.
-      </p>
-
-      <p>
-        Appuyez sur le bouton
-        <strong>Partager</strong>
-        puis choisissez
-        <strong>« Sur l'écran d'accueil »</strong>.
-      </p>
-
-    </div>
-
-
-    <!-- ORDINATEUR -->
-    <div id="desktopInstructions" class="installation">
-
-      <div class="installation-title">
-        Installer l'application
-      </div>
-
-      <p>
-        Si votre navigateur propose l'installation de cette application,
-        utilisez l'icône d'installation présente dans la barre d'adresse.
-      </p>
-
-      <p>
-        Vous pouvez également ouvrir le menu de votre navigateur et rechercher
-        <strong>« Installer l'application »</strong>.
-      </p>
-
-    </div>
-
-  </div>
-
+  </main>
 
   <script>
-    const userAgent =
-      navigator.userAgent ||
-      navigator.vendor ||
-      window.opera;
-
-    const isAndroid = /Android/i.test(userAgent);
-
+    const isAndroid = /Android/i.test(navigator.userAgent);
     const isIOS =
-      /iPhone|iPad|iPod/i.test(userAgent) ||
-      (
-        navigator.platform === "MacIntel" &&
-        navigator.maxTouchPoints > 1
-      );
+      /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
     const isChromeAndroid =
       isAndroid &&
-      /Chrome/i.test(userAgent) &&
-      !/EdgA|OPR|SamsungBrowser|Firefox/i.test(userAgent);
+      /Chrome/i.test(navigator.userAgent) &&
+      !/EdgA|OPR|SamsungBrowser|Firefox/i.test(navigator.userAgent);
 
-    const isDesktop =
-      !isAndroid && !isIOS;
-
-    const androidOther =
-      document.getElementById("androidOther");
-
-    const androidChrome =
-      document.getElementById("androidChrome");
-
-    const iosInstructions =
-      document.getElementById("iosInstructions");
-
-    const desktopInstructions =
-      document.getElementById("desktopInstructions");
-
-    if (isAndroid) {
-
-      if (isChromeAndroid) {
-        androidChrome.style.display = "block";
-      } else {
-        androidOther.style.display = "block";
-      }
-
-    } else if (isIOS) {
-
-      iosInstructions.style.display = "block";
-
-    } else if (isDesktop) {
-
-      desktopInstructions.style.display = "block";
-
-    }
-
-
-    /*
-      Installation PWA Android / Chrome
-    */
+    const androidChrome = document.getElementById("androidChrome");
+    const androidOther = document.getElementById("androidOther");
+    const ios = document.getElementById("ios");
+    const desktop = document.getElementById("desktop");
+    const installButton = document.getElementById("installButton");
+    const manualAndroid = document.getElementById("manualAndroid");
 
     let deferredPrompt = null;
 
-    const installButton =
-      document.getElementById("installButton");
+    if (isChromeAndroid) {
+      androidChrome.style.display = "block";
+    } else if (isAndroid) {
+      androidOther.style.display = "block";
+    } else if (isIOS) {
+      ios.style.display = "block";
+    } else {
+      desktop.style.display = "block";
+    }
 
-    const androidManual =
-      document.getElementById("androidManual");
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      deferredPrompt = event;
+      installButton.style.display = "block";
+      manualAndroid.style.display = "none";
+    });
 
-    window.addEventListener(
-      "beforeinstallprompt",
-      (event) => {
-
-        event.preventDefault();
-
-        deferredPrompt = event;
-
-        installButton.style.display = "block";
-
-        androidManual.style.display = "none";
+    installButton.addEventListener("click", async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        try {
+          await deferredPrompt.userChoice;
+        } catch (error) {}
+        deferredPrompt = null;
+        return;
       }
-    );
 
+      manualAndroid.style.display = "block";
+    });
 
-    installButton.addEventListener(
-      "click",
-      async () => {
-
-        if (deferredPrompt) {
-
-          deferredPrompt.prompt();
-
-          const result =
-            await deferredPrompt.userChoice;
-
-          console.log(
-            "Résultat installation :",
-            result.outcome
-          );
-
-          deferredPrompt = null;
-
-          installButton.style.display = "none";
-
-        } else {
-
-          installButton.style.display = "none";
-
-          androidManual.style.display = "block";
-        }
-      }
-    );
-
-
-    window.addEventListener(
-      "appinstalled",
-      () => {
-
-        console.log(
-          "ORGANISATION ROYAN-ORGUES a été installée."
-        );
-
-        installButton.style.display = "none";
-
-        androidManual.style.display = "none";
-      }
-    );
+    window.addEventListener("appinstalled", () => {
+      installButton.style.display = "none";
+      manualAndroid.style.display = "none";
+      deferredPrompt = null;
+    });
   </script>
-
 </body>
 </html>
